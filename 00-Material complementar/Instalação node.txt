@@ -1,0 +1,41 @@
+NPM - NODE Patch Manager (Gerenciador de pacotes)
+Baixar instalador -> nodejs.org
+
+Comando para verificar se foi instalado corretamente
+
+Prompt do windows ou Terminal
+# Verify the Node.js version:
+node -v # Should print "v22.12.0".
+
+# Verify npm version:
+npm -v 
+# Should print "10.9.0".
+
+npm init ->(inicialzia novo projeto criando estrutura de pasta e arquivo de configurações package.jason) 
+package name: (eclipse-workspace) meu-primeiro-projeto (Colocar nome do projeto)
+version: (1.0.0) (Vai pedir a versão só dar <enter>)
+description: (dar enter pode ser colocado depois)
+entry point: (teste.js) index.js (Arquivo inicial index.js)
+test command: <Enter>
+git repository: <Enter>
+keywords: <Enter>
+author: Fernando R. de Almeida
+license: (ISC) <Enter>
+Is this OK? (yes) (Gera arquivo de configuração package.json com as informações acima)
+
+npm init -y (Não faz as perguntas pega respostas padroes)
+npm run anitta (Executa script)
+
+#Estrutura de pastas do projeto
+criar pasta src (Source) armazena fontes customizados
+Fora da pasta src (ficam os arquivos de configuração)
+
+#Executar fonte javascript com nodejs
+node src/index.js
+
+#executa automaticamente após ser salvo
+node --watch src/index.js
+
+
+
+

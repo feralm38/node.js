@@ -1,0 +1,3 @@
+Personalizar VScod = Pesquisar em extensões por theme (Hackthebox)
+Personalizar Icons = Pesquisar em extensões por icons (Symbols)
+Acessar Terminal = CRT+'

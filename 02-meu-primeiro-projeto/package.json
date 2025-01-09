@@ -1,0 +1,13 @@
+{
+  "name": "meu-projeto",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "anitta": "echo \"Ola mundo\" && exit 1"
+  },
+  "keywords": ["project","minha primeira api"],
+  "author": "Fernando Ricardo de Almeida",
+  "license": "ISC",
+  "description": "My First NODE.js"
+}
