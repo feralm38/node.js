@@ -1,0 +1,77 @@
+
+site oficial para pegar pacotes nodejs: https://www.npmjs.com/
+lista de 75 pacotes uteis: https://firebearstudio.com/blog/node-js-command-line-apps-utilities.html
+documentação do npm: https://docs.npmjs.com/
+
+npm init -y
+node --watch [arquivo] node fica vigiando arquivo
+.gitignore -> Não sobe pasta especificadas neste arquivo
+
+npmjs.com -> repositário de pacotes
+npm install chalk -> Intala um pacote / Cria package-lock.json (recita para reconsotruir toda a arvore de parcotes) e pasta node_modules on fica salvo o pacote
+npm install ou npm i -> restaura node_modules caso a pasta tenha sito excluido ou não veio no repositorio do GIT, utiliza o arquivo
+package-lock.json para restaurar.
+
+npm uninstall log-symbols (desinstala pacote)
+
+npm fund -> Lista link de download onde estão vindo as dependencias do projeto
+
+npm update chalk -> Atulizar pacote verificar se existe pacote mais recente e atualiza.
+
+
+npm i log-symbols -D -> Instala devDependencies (Depenca que só roda no servidor dev)
+package.json
+"dependencies": {
+    "chalk": "^5.4.1"    
+  },
+  "devDependencies": {   
+     "log-symbols": "^7.0.0"
+  }  
+
+
+
+// Como usar o package (no site da npm.js.com pesquisar nome do pacote e veriificar a documentação)
+
+IMPORTANT: Chalk 5 is ESM. If you want to use Chalk with TypeScript or a build tool, you will probably want to use Chalk 4 for now. Read more.
+
+Usage
+import chalk from 'chalk';
+
+console.log(chalk.blue('Hello world!'));
+Chalk comes with an easy to use composable API where you just chain and nest the styles you want.
+
+import chalk from 'chalk';
+
+const log = console.log;
+
+// Combine styled and normal strings
+log(chalk.blue('Hello') + ' World' + chalk.red('!'));
+
+// Compose multiple styles using the chainable API
+log(chalk.blue.bgRed.bold('Hello world!'));
+
+// Pass in multiple arguments
+log(chalk.blue('Hello', 'World!', 'Foo', 'bar', 'biz', 'baz'));
+
+// Nest styles
+log(chalk.red('Hello', chalk.underline.bgBlue('world') + '!'));
+
+// Nest styles of the same type even (color, underline, background)
+log(chalk.green(
+	'I am a green line ' +
+	chalk.blue.underline.bold('with a blue substring') +
+	' that becomes green again!'
+));
+
+// ES2015 template literal
+log(`
+CPU: ${chalk.red('90%')}
+RAM: ${chalk.green('40%')}
+DISK: ${chalk.yellow('70%')}
+`);
+
+// Use RGB colors in terminal emulators that support it.
+log(chalk.rgb(123, 45, 67).underline('Underlined reddish color'));
+log(chalk.hex('#DEADED').bold('Bold gray!'));
+
+

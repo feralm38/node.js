@@ -1,0 +1,30 @@
+Scrips ficam dentro da propriedade scripts no arquivo package.json
+"type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+
+* Podem sendo a primeira propriedade o alias apelido "test": comando a serem executados podendo ser executado varios comandos
+sequenciais separados sempre por &&.
+
+Para rodar um script npm run nome do script
+npm run test
+
+Outra forma sem terminal seria ir até o arquivo package.json clicar bom botão direito sobre o script e clicar em executar
+Outra form no VSCODE na parte superior esquerda explorador tem "..." selecionar opção "ScriptsNPM" habita na parte inferior
+esquerda aba "Scripts NPM" onde são exibidos os scripts podem ser executados com botão direito.
+
+Padrões Alias Scripts
+start: Start the application.
+dev: Start the development server with hot reloading. build: Build the application for production.
+test: Run unit tests. test:watch: Run unit tests in watch mode. test:coverage: Generate test coverage report.
+lint: Lint the codebase. lint:fix: Fix linting errors automatically.
+format: Format code according to coding standards. clean: Clean up generated files.
+precommit: Run linting, formatting, and tests before committing code. deploy: Deploy the application to a server. analyze: Analyze the bundle size or performance of the application.
+storybook: Start Storybook for component development. storybook:build: Build Storybook for production. storybook:deploy: Deploy Storybook to a hosting service.
+
+
+npm scripts documentação:https://docs.npmjs.com/cli/v10/using-npm/scripts
+
+scripts do time do facebook no projeto do react:: https://github.com/facebook/react/blob/main/package.json

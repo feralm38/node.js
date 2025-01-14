@@ -1,0 +1,15 @@
+{
+  "name": "09-variaveis-de-ambientes-npm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev":"node --env-file=.env.dev --watch src/index.js",
+    "start:prod":"node --env-file=.env.prod --watch src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

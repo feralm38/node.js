@@ -1,0 +1,14 @@
+Criar arquivo na raiz do projeto .env
+Para refereniciar um arquivo .env no projeto editar no script de inicilazação acrescentar --env-file:.env
+
+node leia meu arquivo de variaveis de embiente e depois execute em modo watch meu arquivo index.js
+"start:dev":"node --env-file=.env --watch src/index.js"
+
+// Caso projeto antes da versão "20" do node nas versões atuais já verm por padrão
+// necessário instalar o pacote do dotenv
+npm install dotenv
+
+// Importar no projeto 
+import "dotenv/config";
+
+
