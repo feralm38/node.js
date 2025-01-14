@@ -1,3 +1,10 @@
 Personalizar VScod = Pesquisar em extensões por theme (Hackthebox)
 Personalizar Icons = Pesquisar em extensões por icons (Symbols)
 Acessar Terminal = CRT+'
+
+//Padrões de aquivos que você queira que fiqeum juntos, CRT+Shit+P ->  pesquisar Settings (Open user setings Json)
+//adionar propriedade no arquivo
+"explorer.fileNesting.patterns":{
+        "ormconfig.json": "ormconfig.sample.json",
+        "package.json": "package-lock, yarn.lock, pnpm-lock.yaml",    
+    } 
