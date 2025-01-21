@@ -1,0 +1,99 @@
+https://www.typescriptlang.org/
+
+https://www.typescriptlang.org/pt/tsconfig/
+
+TypeScript desenvolvido pela Microsoft
+
+TypeScript é JavaScript com sintaxe para tipos.
+TypeScript é uma linguagem de programação fortemente tipada que se baseia em JavaScript, oferecendo melhores ferramentas em qualquer escala.
+
+Superset -> pacote adicional de recurso a linguagem de programação transformando em uma nova linguagem
+
+TypeScript utiliza variaveis com tipagens o editor de codigo ajuda a identificar as tipagens.
+
+Transpile -> combinação tranduzir (para javascript) de uam linguagem para outra e compilar
+
+TypeScript -> editor de código identica erro e mostra possivel solução (Compile-time)
+javascript -> Erros identificados somente da execução (Runtime)
+
+Quando utilizar javascript ou TypeScript depende de tamanho do projeto
+
+Repositório: https://github.com/digitalinnovationone/formacao-nodejs/tree/main/10-typescript
+Documentação oficial: https://www.typescriptlang.org
+Folhinhas de cola do Typescript: https://www.typescriptlang.org/cheatsheets
+Playground pra Testar código Javascript e Typescript: https://typescriptlang.org/play
+
+// instalar package typescript -D (cria dependencia de desenvolvimento)
+npm install -D typescript
+
+Para editor identificar se arquivo é um type script necessário colocar extensão .ts
+index.ts
+
+Para executar arquivo .ts no node é necessário converte para ts utilizando a função abaixo gerando um novo arquivo index.js
+npx tsc src/index.ts 
+
+--------------------------------
+Automatizar
+"scripts": {
+    "dist":"npx tsc src/index.ts",
+    "start:dev": "npm run dist && node src/index.js"
+  },
+
+  Configurar compartamento do typescript no node
+  Created a new tsconfig.json
+  npx tsc -- init -> criar arquivo de ts config no projeto
+
+  "target":"ES6" ->    Padrão javascript ACMSCRIPT 6 
+  "module":"CommonJS"  Para ser mais comaptivel com programas mais antigos type modulo CommonJS
+  "outDir": "./dist",  Especifica pasta onde de produção onde será salvo arquivo .js
+  "strict": true       Habilita descrição de funcionalidade de uma função ao ser colocado mouse sobre a função ou metodo
+  "esModuleInterop": true,  habilita compatilidade ESM ou CommonJS
+
+"scripts": {
+    "dist":"npx tsc",
+    
+}
+
+Outra opção é instalar  um package no nodejs roda arquivo .ts autoamticamente sem necessidade de exporta para .js
+npm install -D tsx
+
+tsx run src/index.ts
+
+"scripts": {
+    "dist": "npx tsc",
+    "start:dev": "tsx run src/index.ts",
+    "start:dev:watch": "tsx watch run src/index.ts",
+    "start:dist": "npm run dist && node src/index.js"
+  }
+
+npm install -D tsup -> alternantica ao tsc
+
+"scripts": {
+    "dist": "tsup src",
+    "start:dev": "tsx src/index.ts",
+    "start:watch": "tsx watch src/index.ts",
+    "start:dist": "npm run dist && node src/index.js"
+  },
+
+ npm run dist
+
+// Tendencia do mercado package mais utilizado
+https://npmtrends.com/tsc-vs-tsup
+
+
+Intalar todos packages ncessários para typescript simutaneamente
+npm install -D typescript tsx tsup 
+
+Inicializar tsconfig
+npx tsc --init
+
+Estrutura de scripts
+"scripts": {
+    "dist": "tsup src",
+    "start:dev": "tsx src/index.ts",
+    "start:watch": "tsx watch src/index.ts",
+    "start:dist": "npm run dist && node src/index.js"
+  },
+
+------------------------------------
+

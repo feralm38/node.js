@@ -1,0 +1,49 @@
+
+// Inicializar Node.js com as paratrizações basicas:
+npm init -y
+// adicionar tb no arquivo package.json a tag "type": "module",
+// Criar .gitignore e adicionar a pasta node_modules/
+
+//instalar os pacotes typescript:
+npm install typescript tsx tsup -D
+
+// Inicializar o tsc:
+// O TSC compila o código TypeScript em arquivos JavaScript (.js), a partir de arquivos TypeScript (.ts ou .tsx)
+npx tsc --init 
+
+// Após Inicializar será gerado aruivo de parametrização: 
+tsconfig
+
+// editar e apagar as parametrizações padrões do arquivo tsconfig:
+{
+	"compilerOptions": {
+		"target": "ES6",
+		"module": "CommonJS",
+		"outDir": "./dist",
+		"strict": true,
+		"esModuleInterop": true
+	}	
+}
+
+// Criar script para faciliar a execução do typescript:
+"start:dev": "tsx src/index.ts"
+
+// Executar o projeto:
+npm run start:dev
+
+//Executar em moto debug
+No arquivo package.json posicionar mouse no script de execução será exibida a opção debug.
+
+// Criar arquivo launch.json no VScond para executar automaticamente
+- Quando ir na opção de debug ele vai sugerir para criar um aqui launch.json
+- vai criar uma pasta .vscode e salvar o arquivo launch
+- Editar o aquivo 
+- clicar no botão adicionar configuração
+- selecionar a opção Node.js Attach by Process ID
+
+Atalho ctrl-shift+d
+Exibe os scripts disponiveis e executa em modo debug
+
+
+
+
